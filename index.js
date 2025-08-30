@@ -34,12 +34,23 @@ function addHabit(){
         <div class="border habit-item">
             <h3>${habits[i]}</h3>
                 <div class="counter">
-                    <p>0</p>
-                    <button>+</button>
+                    <p id="${habits[i]}">0</p>
+                    <button id="${i}" onClick="increment()">+</button>
                 </div>
         </div>
         `
     }
     //habitList.innerHTML = str //This updates the DOM once. keep this in mind for efficiency 
     habitList.innerHTML = str
+}
+let count = 0
+
+function increment(){
+    console.log("click")
+    //let pEl = document.getElementById("Walk 10,000 steps a day")
+    let pEl = document.getElementsByTagName("p")
+
+    count = count + 1
+
+    pEl.textContent = count
 }
