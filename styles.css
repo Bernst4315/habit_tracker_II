@@ -43,3 +43,18 @@ button{
 #habit-list{
     margin: 20px; 
 }
+
+.habit-item{
+    padding: 5px;
+}
+
+.counter{
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+
+}
+
+.counter button, p{
+    margin: 10px;
+}
