@@ -1,3 +1,41 @@
+/* Utility */
+
+.border{
+    border: 1px dotted red;
+}
+
+/* Styles */
+
 body{
-    background-color: black;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px, auto;
+    font-size: 30px;
+}
+
+#habit-div{
+    margin: 10px;
+    padding: 20px;
+
+}
+
+#habitInput-el{
+    /* width: 100%; */
+    height: auto;
+    padding: 5px;
+    margin: 20px;
+    font-size: inherit;
+    box-sizing: border-box;
+}
+
+button{
+    font-size: inherit;
+    padding: 5px 20px;
+}
+
+#habit-list{
+    margin: 20px; 
 }
