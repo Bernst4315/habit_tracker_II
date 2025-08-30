@@ -13,11 +13,12 @@ addBtn.addEventListener("click", function(){
    
     let habit = "";
     habit = habitEl.value
+
+    if(habit)
     habits.push(habit)
-    console.log(habit)
-    habitEl.value = ""
-    console.log(habits)
+
     addHabit()
+    habitEl.value = ""
 })
 
 //Functions
@@ -26,8 +27,8 @@ function addHabit(){
 
     //const liEl = document.createElement("li")
     let str = ""
-    for(let i = 0; i < habits.length; i++){
+    for(let i = 0; i < habits.length; i++){ //find a way to update list w/out rerendering whole array
         str += `<li>${habits[i]}</li>`
     }
-    habitList.innerHTML = str 
+    habitList.innerHTML = str //This updates the DOM once. keep this in mind for efficiency 
 }
