@@ -14,10 +14,17 @@ body{
     padding: 5px;
     margin: 10px, auto;
     font-size: 30px;
+    background-color: #dac8ae;
+}
+
+header, button {
+  background-color: #4F7942;
+  color: #f8f4ff;  
 }
 
 header h1{
     margin-left: 20px;
+    
 }
 
 #habit-div{
@@ -38,10 +45,13 @@ header h1{
 button{
     font-size: inherit;
     padding: 5px 20px;
+    border: none;
+    border-radius: 4.6px;
 }
 
 #habit-list{
     margin: 20px; 
+    list-style-type: none;
 }
 
 .habit-item{

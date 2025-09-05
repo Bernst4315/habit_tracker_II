@@ -31,13 +31,13 @@ function addHabit(){
     for(let i = 0; i < habits.length; i++){ //find a way to update list w/out rerendering whole array
         // str += `<li>${habits[i]}</li>`
         str += `
-        <div class="border habit-item">
+        <li class="border habit-item">
             <h3>${habits[i]}</h3>
                 <div class="counter">
                     <p id="${habits[i]}">0</p>
                     <button id="${i}" onClick="increment()">+</button>
                 </div>
-        </div>
+        </li>
         `
     }
     //habitList.innerHTML = str //This updates the DOM once. keep this in mind for efficiency 
