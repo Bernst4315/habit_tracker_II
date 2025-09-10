@@ -38,7 +38,7 @@ function addHabit(){
 
     habit.habit = habitEl.value
 
-    if(habit.value)
+    if(habit.habit)
     habits.push(habit)
 
     // console.log(habits)
