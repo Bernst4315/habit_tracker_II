@@ -7,12 +7,8 @@
 /* Styles */
 
 body{
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     border: 1px solid black;
-    padding: 5px;
-    margin: 10px, auto;
+    margin: 0;
     font-size: 30px;
     background-color: #dac8ae;
 }
@@ -20,6 +16,10 @@ body{
 header, button {
   background-color: #4F7942;
   color: #f8f4ff;  
+}
+
+header{
+    
 }
 
 header h1{
@@ -46,12 +46,13 @@ button{
     font-size: inherit;
     padding: 5px 20px;
     border: none;
-    border-radius: 4.6px;
+    border-radius: 5px;
 }
 
 #habit-list{
     margin: 20px; 
     list-style-type: none;
+    margin-left: -20px;
 }
 
 .habit-item{

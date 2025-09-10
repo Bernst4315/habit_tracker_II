@@ -10,47 +10,62 @@ console.log(habitList)
 
 //Event Listeners 
 
-addBtn.addEventListener("click", function(){
-   
-    let habit = "";
-    habit = habitEl.value
-
-    if(habit)
-    habits.push(habit)
-
-    addHabit()
-    habitEl.value = ""
+document.addEventListener("click", function(e){
+    
+    switch(e.target.id){
+        case "addHabit-btn":
+            console.log(e.target.id)
+            addHabit()
+            break
+        case "increment-btn":
+            console.log(e.target.id)
+            incrementBtn(e)
+            break
+        default:
+          console.log("Click Registered on " + e.target.id)  
+    }
 })
+
 
 //Functions
 
 function addHabit(){
+   
+    let habit = {
+        habit: "",
+        counter: 0
+    }
 
-    //const liEl = document.createElement("li")
+    habit.habit = habitEl.value
+
+    if(habit.value)
+    habits.push(habit)
+
+    // console.log(habits)
+
+    renderHabitList()
+    habitEl.value = ""
+}
+
+function renderHabitList(){
+
     let str = ""
     for(let i = 0; i < habits.length; i++){ //find a way to update list w/out rerendering whole array
-        // str += `<li>${habits[i]}</li>`
+
         str += `
         <li class="border habit-item">
-            <h3>${habits[i]}</h3>
+            <h3>${habits[i].habit}</h3>
                 <div class="counter">
-                    <p id="${habits[i]}">0</p>
-                    <button id="${i}" onClick="increment()">+</button>
+                    <p data-num ="increment-btn-${habits[i].habit}">${habits[i].counter}</p>
+                    <button class="increment-btn" id="increment-btn-${habits[i].habit}">+</button>
                 </div>
         </li>
         `
     }
-    //habitList.innerHTML = str //This updates the DOM once. keep this in mind for efficiency 
-    habitList.innerHTML = str
+    habitList.innerHTML = str //This updates the DOM once. keep this in mind for efficiency 
 }
-let count = 0
 
-function increment(){
-    console.log("click")
-    //let pEl = document.getElementById("Walk 10,000 steps a day")
-    let pEl = document.getElementsByTagName("p")
-
-    count = count + 1
-
-    pEl.textContent = count
+function incrementBtn(e){
+    console.log("registered in increment function " + e.target.id)
+    //document.getElementById(``)
 }
